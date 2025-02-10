@@ -28,12 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            components = new System.ComponentModel.Container();
+            bindingSource1 = new BindingSource(components);
+            formsPlot1 = new ScottPlot.WinForms.FormsPlot();
+            ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
+            SuspendLayout();
+            // 
+            // formsPlot1
+            // 
+            formsPlot1.DisplayScale = 1.25F;
+            formsPlot1.Location = new Point(170, 46);
+            formsPlot1.Name = "formsPlot1";
+            formsPlot1.Size = new Size(449, 342);
+            formsPlot1.TabIndex = 0;
+            formsPlot1.Load += formsPlot1_Load_1;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(formsPlot1);
+            Name = "Form1";
+            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private BindingSource bindingSource1;
+        private ScottPlot.WinForms.FormsPlot formsPlot1;
     }
 }
